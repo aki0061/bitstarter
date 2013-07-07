@@ -9,7 +9,7 @@ app.get('/', function(request, response) {
   fs.readFile(ifile,function (err,data){
     if(err) throw err;
     console.log(data);
-    response.send(data.toString);
+    response.send(data.toString('utf-8'));
   });
  
   //response.send('Hello World2!');
