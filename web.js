@@ -9,10 +9,10 @@ app.get('/', function(request, response) {
   fs.readFile(ifile,function (err,data){
     if(err) throw err;
     console.log(data);
+    response.send(data.toString);
   });
  
   //response.send('Hello World2!');
-  response.send(data.toString);
 });
 
 var port = process.env.PORT || 5000;
